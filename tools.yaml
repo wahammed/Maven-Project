@@ -1,0 +1,115 @@
+tool:
+  allure:
+    installations:
+    - name: "allure-cmd"
+      properties:
+      - installSource:
+          installers:
+          - allureCommandlineInstaller:
+              id: "2.13.2"
+  ansibleInstallation:
+    installations:
+    - home: "/var/lib/jenkins/"
+      name: "Ansible"
+  customTool:
+    installations:
+    - name: "python369"
+      properties:
+      - installSource:
+          installers:
+          - zip:
+              url: "https://www.python.org/ftp/python/3.6.9/Python-3.6.9rc1.tgz"
+    - name: "TF"
+      properties:
+      - installSource:
+          installers:
+          - zip:
+              url: "https://releases.hashicorp.com/terraform/0.11.14/terraform_0.11.14_linux_amd64.zip"
+  git:
+    installations:
+    - home: "git"
+      name: "Default"
+  go:
+    installations:
+    - name: "Go"
+      properties:
+      - installSource:
+          installers:
+          - golangInstaller:
+              id: "1.16.4"
+  gradle:
+    installations:
+    - name: "gradle"
+      properties:
+      - installSource:
+          installers:
+          - gradleInstaller:
+              id: "5.0"
+  jdk:
+    installations:
+    - name: "JAVA8"
+      properties:
+      - installSource:
+          installers:
+          - adoptOpenJdkInstaller:
+              id: "jdk8u162-b12_openj9-0.8.0"
+    - name: "jdk8.172"
+      properties:
+      - installSource:
+          installers:
+          - adoptOpenJdkInstaller:
+              id: "jdk8u192-b12"
+    - name: "jdk11"
+      properties:
+      - installSource:
+          installers:
+          - adoptOpenJdkInstaller:
+              id: "jdk-11.0.3+7"
+  maven:
+    installations:
+    - name: "M2_HOME"
+      properties:
+      - installSource:
+          installers:
+          - maven:
+              id: "3.5.2"
+  mavenGlobalConfig:
+    globalSettingsProvider: "standard"
+    settingsProvider: "standard"
+  nodejs:
+    installations:
+    - name: "NodeJS-8"
+      properties:
+      - installSource:
+          installers:
+          - nodeJSInstaller:
+              id: "10.23.3"
+              npmPackagesRefreshHours: 72
+    - name: "NodeJs-12"
+      properties:
+      - installSource:
+          installers:
+          - nodeJSInstaller:
+              id: "12.22.1"
+  sonarRunnerInstallation:
+    installations:
+    - name: "SONAR_SCANNER"
+      properties:
+      - installSource:
+          installers:
+          - sonarRunnerInstaller:
+              id: "2.6.1"
+    - name: "SONARQUBE_SCANNER"
+      properties:
+      - installSource:
+          installers:
+          - sonarRunnerInstaller:
+              id: "4.0.0.1744"
+  terraform:
+    installations:
+    - name: "Terraform"
+      properties:
+      - installSource:
+          installers:
+          - terraformInstaller:
+              id: "0.14.10-linux-386"
